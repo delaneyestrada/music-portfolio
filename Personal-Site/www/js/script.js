@@ -1,5 +1,34 @@
 $(document).ready(function () {
     "use strict";
+    // Touch screen functionality
+    let windowWidth = document.querySelector('html').clientWidth
+    window.addEventListener('touchstart', function onFirstTouch() {
+        // or set some global variable
+        window.USER_IS_TOUCHING = true;
+        // we only need to know once that a human touched the screen, so we can stop listening now
+        window.removeEventListener('touchstart', onFirstTouch, false);
+    }, false);
+    if (windowWidth < 700 && window.USER_IS_TOUCHING) {
+        // get YouTube video in the DOM and set to open YouTube in a new tab
+        const video = document.querySelector('.box-video a')
+        video.setAttribute('href', 'https://www.youtube.com/watch?v=Ss3mCmL6klI&list=PLrev1ridNn9FFcYvmvB9e3kgJc6T_hexX')
+        video.setAttribute('target', '_blank')
+        // let the user know about the function of the video
+        const redirectNode = document.createElement('div')
+        const redirectText = document.createTextNode('Opens YouTube in a new tab')
+        redirectNode.appendChild(redirectText);
+        document.querySelector('.box-video .project-info').appendChild(redirectNode);
+        // make overlays on performance credits shown by default
+        let style = document.createElement('style');
+        style.innerHTML = `.box-gallery .project-info, .box-gallery .project-icon {
+            opacity: 1 !important;
+        }`
+        // Get the first script tag
+        let ref = document.querySelector('script');
+        // Insert our new styles before the first script tag
+        ref.parentNode.insertBefore(style, ref);
+
+    }
 
     /* =================================
 	LOADER 
@@ -12,7 +41,9 @@ $(document).ready(function () {
         bgi.each(function () {
             var e = $(this),
                 t = e.attr("data-background");
-            e.css({ "background-image": "url(" + t + ")" });
+            e.css({
+                "background-image": "url(" + t + ")"
+            });
         });
 
     var progressBar = $(".progress-bar");
@@ -20,7 +51,9 @@ $(document).ready(function () {
         progressBar.each(function () {
             var e = $(this),
                 t = e.attr("aria-valuenow");
-            e.css({ width: t + "%" });
+            e.css({
+                width: t + "%"
+            });
         });
 
     /* =================================
@@ -31,8 +64,7 @@ $(document).ready(function () {
 
         if (target.length) {
             event.preventDefault();
-            $("html, body").stop().animate(
-                {
+            $("html, body").stop().animate({
                     scrollTop: target.offset().top,
                 },
                 1000
@@ -77,7 +109,9 @@ $(document).ready(function () {
     b.each(function () {
         var e = $(this),
             ocImg = e.find("img").attr("src");
-        e.css({ "background-image": "url(" + ocImg + ")" });
+        e.css({
+            "background-image": "url(" + ocImg + ")"
+        });
     });
 
     slides.owlCarousel({
@@ -112,9 +146,9 @@ $(document).ready(function () {
 
     //hide or show the "back to top" link
     $(window).scroll(function () {
-        $(this).scrollTop() > offset
-            ? $back_to_top.addClass("cd-is-visible")
-            : $back_to_top.removeClass("cd-is-visible cd-fade-out");
+        $(this).scrollTop() > offset ?
+            $back_to_top.addClass("cd-is-visible") :
+            $back_to_top.removeClass("cd-is-visible cd-fade-out");
         if ($(this).scrollTop() > offset_opacity) {
             $back_to_top.addClass("cd-fade-out");
         }
@@ -123,8 +157,7 @@ $(document).ready(function () {
     //smooth scroll to top
     $back_to_top.on("click", function (event) {
         event.preventDefault();
-        $("body,html").animate(
-            {
+        $("body,html").animate({
                 scrollTop: 0,
             },
             scroll_top_duration
@@ -259,25 +292,6 @@ $(document).ready(function () {
         preloader: false,
 
         fixedContentPos: false,
-    });
-
-    $(".grid, .popup-gallery").magnificPopup({
-        delegate: "a",
-        type: "image",
-        tLoading: "Loading image #%curr%...",
-        mainClass: "mfp-img-mobile",
-        gallery: {
-            enabled: true,
-            navigateByImgClick: true,
-            preload: [0, 1],
-        },
-        image: {
-            tError:
-                '<a href="%url%">The image #%curr%</a> could not be loaded.',
-            titleSrc: function (item) {
-                return item.el.attr("title") + "";
-            },
-        },
     });
 
     /* =================================

@@ -6420,3 +6420,7 @@ Back To Top Section
 .ftex {
   margin-bottom: 0;
 }
+
+.mfp-img {
+  max-width: 600px !important;
+}
