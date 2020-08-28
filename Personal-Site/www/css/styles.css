@@ -422,7 +422,8 @@ textarea {
   background-color: #eee;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
 }
@@ -499,7 +500,8 @@ h6 {
   font-size: 13px;
 }
 
-strong, b {
+strong,
+b {
   font-weight: 700;
 }
 
@@ -760,12 +762,6 @@ ul li {
 .bgi-cover-center {
   background-size: cover;
   background-position: center;
-}
-
-.bgi-cover-fixed {
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
 }
 
 .bgi-repeat {
@@ -3827,9 +3823,9 @@ ACCORDION
   background: rgba(0, 0, 0, 0.5);
   /*padding-top: 50%;*/
   text-align: center;
-  opacity: 0;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
   -webkit-transition: all ease 0.25s;
   transition: all ease 0.25s;
 }
@@ -3837,9 +3833,9 @@ ACCORDION
 .box-gallery .project-info .project-icon {
   position: relative;
   top: 0;
-  opacity: 0;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
   -webkit-transition: all ease 0.25s;
   transition: all ease 0.25s;
   width: 100%;
@@ -6423,4 +6419,14 @@ Back To Top Section
 
 .mfp-img {
   max-width: 600px !important;
+}
+
+#contact {
+  background: -webkit-gradient(linear, left top, left bottom, from(#000000), to(#2f2f2f));
+  background: linear-gradient(to bottom, #000000, #2f2f2f);
+}
+
+#quote {
+  background: -webkit-gradient(linear, left bottom, left top, from(#000000), to(#1a1a1a));
+  background: linear-gradient(to top, #000000, #1a1a1a);
 }

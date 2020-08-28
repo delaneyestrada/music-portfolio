@@ -1,14 +1,16 @@
 $(document).ready(function () {
     "use strict";
     // Touch screen functionality
+    function isMobile() {
+        try {
+            document.createEvent("TouchEvent");
+            return true;
+        } catch (e) {
+            return false;
+        }
+    }
     let windowWidth = document.querySelector('html').clientWidth
-    window.addEventListener('touchstart', function onFirstTouch() {
-        // or set some global variable
-        window.USER_IS_TOUCHING = true;
-        // we only need to know once that a human touched the screen, so we can stop listening now
-        window.removeEventListener('touchstart', onFirstTouch, false);
-    }, false);
-    if (windowWidth < 700 && window.USER_IS_TOUCHING) {
+    if (windowWidth < 700) {
         // get YouTube video in the DOM and set to open YouTube in a new tab
         const video = document.querySelector('.box-video a')
         video.setAttribute('href', 'https://www.youtube.com/watch?v=Ss3mCmL6klI&list=PLrev1ridNn9FFcYvmvB9e3kgJc6T_hexX')
@@ -18,6 +20,9 @@ $(document).ready(function () {
         const redirectText = document.createTextNode('Opens YouTube in a new tab')
         redirectNode.appendChild(redirectText);
         document.querySelector('.box-video .project-info').appendChild(redirectNode);
+
+    }
+    if (isMobile()) {
         // make overlays on performance credits shown by default
         let style = document.createElement('style');
         style.innerHTML = `.box-gallery .project-info, .box-gallery .project-icon {
@@ -27,34 +32,33 @@ $(document).ready(function () {
         let ref = document.querySelector('script');
         // Insert our new styles before the first script tag
         ref.parentNode.insertBefore(style, ref);
-
     }
 
-    /* =================================
-	LOADER 
-	=================================== */
-    $(".loader").delay(400).fadeOut();
-    $(".animationload").delay(400).fadeOut("fast");
+    // /* =================================
+    // LOADER 
+    // =================================== */
+    // $(".loader").delay(400).fadeOut();
+    // $(".animationload").delay(400).fadeOut("fast");
 
-    var bgi = $("[data-background]");
-    bgi.length > 0 &&
-        bgi.each(function () {
-            var e = $(this),
-                t = e.attr("data-background");
-            e.css({
-                "background-image": "url(" + t + ")"
-            });
-        });
+    // var bgi = $("[data-background]");
+    // bgi.length > 0 &&
+    //     bgi.each(function () {
+    //         var e = $(this),
+    //             t = e.attr("data-background");
+    //         e.css({
+    //             "background-image": "url(" + t + ")"
+    //         });
+    //     });
 
-    var progressBar = $(".progress-bar");
-    progressBar.length > 0 &&
-        progressBar.each(function () {
-            var e = $(this),
-                t = e.attr("aria-valuenow");
-            e.css({
-                width: t + "%"
-            });
-        });
+    // var progressBar = $(".progress-bar");
+    // progressBar.length > 0 &&
+    //     progressBar.each(function () {
+    //         var e = $(this),
+    //             t = e.attr("aria-valuenow");
+    //         e.css({
+    //             width: t + "%"
+    //         });
+    //     });
 
     /* =================================
 	SCROLL TO

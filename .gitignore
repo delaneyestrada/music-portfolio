@@ -1,7 +1,4 @@
 .vscode/
-images/
 node_modules/
 package-lock.json
-js/vendor/
-css/vendor/
 resources/

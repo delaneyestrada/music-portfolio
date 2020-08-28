@@ -5,14 +5,17 @@
         position: relative;
         background-color: $white;
         overflow: hidden;
+
         img {
             transform: scale(1, 1);
             transition: 0.4s all linear;
         }
     }
+
     &:hover {
         .media-box {
             background-color: $color-primary;
+
             img {
                 @include opacity(0.8);
                 transform: scale(1.05, 1.05);
@@ -22,8 +25,10 @@
         }
     }
 }
+
 .anim-shadow {
     box-shadow: 4px 5px 0 rgba(black, 0);
+
     &:hover {
         box-shadow: 4px 5px 30px rgba(black, 0.2);
     }
@@ -42,6 +47,7 @@
     font-family: $font-heading;
     @include border-radius(4px);
 }
+
 .btn-default {
     background-color: $color-primary;
     color: $white;
@@ -49,74 +55,89 @@
     border: 0;
     @include border-radius(0);
 }
+
 .btn-default:hover {
     background-color: $color-primary;
 }
+
 .btn-primary {
     background-color: $color-primary;
     @extend .btn;
     border-bottom: 2px solid darken($color-primary, 10%);
     color: $white;
+
     &:hover {
         background-color: lighten($color-secondary, 10%);
         color: $white;
         border-bottom-color: lighten($color-secondary, 10%);
     }
 }
+
 .btn-secondary {
     background-color: $color-secondary;
     @extend .btn;
     border-bottom: 2px solid darken($color-secondary, 10%);
     color: $white;
+
     &:hover {
         background-color: lighten($color-primary, 5%);
         color: $white;
         border-bottom-color: darken($color-secondary, 10%);
     }
 }
+
 .btn-primary.disabled {
     background-color: $color-primary;
     @extend .btn;
     border-bottom: 2px solid darken($color-primary, 10%);
     color: $white;
+
     &:hover {
         background-color: lighten($color-secondary, 10%);
         color: $white;
         border-bottom-color: lighten($color-secondary, 10%);
     }
 }
+
 .btn-secondary.disabled {
     background-color: $color-secondary;
     border-color: $color-secondary;
+
     &:hover {
         background-color: darken($color-secondary, 4%);
         color: $white;
     }
 }
+
 .btn-light {
     background-color: $white;
     @extend .btn;
     color: $color-primary;
     border: 1px solid $white;
+
     &:hover {
         background-color: $black;
         color: $white;
         border-color: $black;
     }
 }
+
 .btn-ghost-light {
     background-color: transparent;
     @extend .btn;
     color: $white;
     border: 1px solid $white;
+
     &:hover {
         background-color: $white;
         color: $color-primary;
         border-color: $white;
     }
 }
+
 .btn-icon {
     font-size: 18px;
+
     .fa {
         margin-right: 10px;
         vertical-align: middle;
@@ -128,15 +149,18 @@
         padding-top: 10px;
         font-size: 1.5em;
     }
+
     &:hover {
         .fa {
             border-color: $color-primary;
         }
     }
 }
+
 .btn-rect {
     @include border-radius(0);
 }
+
 .btn-video {
     i {
         width: 80px;
@@ -148,6 +172,7 @@
         font-size: 34px;
         text-align: center;
     }
+
     color: $white;
 }
 
@@ -166,28 +191,33 @@ SOSMED-ICON
         flex-direction: column;
         text-align: center;
         margin: 0;
+
         &:hover {
             /*color: $color-body;*/
             color: $white;
         }
     }
+
     &.icon-bg-primary {
         a {
             @include border-radius(4px);
             color: $white;
             background-color: $color-primary;
             margin: 0 2px;
+
             &:hover {
                 color: $color-secondary;
             }
         }
     }
+
     &.icon-bg-secondary {
         a {
             @include border-radius(4px);
             color: $color-primary;
             background-color: $color-secondary;
             margin: 0 2px;
+
             &:hover {
                 color: $color-secondary;
                 background-color: $color-primary;
@@ -215,15 +245,18 @@ FEATURE ICON
         font-weight: 700;
         @include opacity(0.15);
     }
+
     .media {
         width: 100%;
         margin-bottom: 30px;
         background-color: transparent;
     }
+
     .icon {
         font-size: 48px;
         color: $color-primary;
     }
+
     .body {
         position: relative;
     }
@@ -231,6 +264,7 @@ FEATURE ICON
     .title {
         color: $black;
     }
+
     @include transisi(0.3s);
 
     &:hover {
@@ -238,6 +272,7 @@ FEATURE ICON
         color: $white;
         transform: translateY(-10px);
         box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15) !important;
+
         .title {
             color: $white;
         }
@@ -253,19 +288,23 @@ IMAGE BOX
     position: relative;
     @extend .anim-media;
     @include transisi(0.4s);
+
     .media-box {
         margin-bottom: 10px;
     }
+
     &:hover {
         .media {
             background-color: $white;
         }
     }
+
     .text-box {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between !important;
     }
+
     .price {
         color: $color-primary;
     }
@@ -279,29 +318,36 @@ IMAGE BOX
     /*@extend .anim-shadow;*/
     /*border: 1px solid lighten($color-body, 30%);*/
     text-align: center;
+
     .media {
         text-align: center;
         padding: 15px;
         background: $white;
         border: 1px solid rgba($color-body, 0.2);
+
         a {
             width: 100%;
         }
     }
+
     .body-text {
         padding: 20px 20px;
+
         .title {
             font-weight: 400;
             color: $color-secondary;
             font-size: 16px;
             margin-bottom: 10px;
+
             a {
                 color: $white;
+
                 &:hover {
                     color: $color-primary;
                 }
             }
         }
+
         .price {
             color: lighten($color-body, 30%);
             font-size: 14px;
@@ -309,27 +355,33 @@ IMAGE BOX
             font-family: $font-heading;
         }
     }
+
     &:hover {
         .media {
             border-color: $color-primary;
         }
     }
 }
+
 .title-blok {
     font-weight: 400;
     color: $color-secondary;
     font-size: 16px;
     margin-bottom: 10px;
+
     a {
         color: $color-secondary;
+
         &:hover {
             color: $color-primary;
         }
     }
 }
+
 .rating {
     unicode-bidi: bidi-override;
     direction: rtl;
+
     span {
         &:before {
             color: $color-primary;
@@ -346,30 +398,36 @@ IMAGE BOX
     display: flex;
     margin-bottom: 20px;
     align-items: center !important;
+
     .media {
         width: 90px;
         height: 90px;
         border: 1px solid lighten($color-body, 30%);
         margin-right: 20px;
     }
+
     .body-text {
         .title {
             font-weight: 400;
             color: $color-secondary;
             font-size: 16px;
             margin-bottom: 10px;
+
             a {
                 color: $color-secondary;
+
                 &:hover {
                     color: $color-primary;
                 }
             }
         }
+
         .price {
             color: $color-primary;
             font-weight: 700;
             font-size: 18px;
         }
+
         @extend .rating;
     }
 }
@@ -380,8 +438,10 @@ IMAGE BOX
         font-weight: 700;
         font-size: 18px;
     }
+
     @extend .rating;
 }
+
 /* ==========================
 ICON 2
 ============================= */
@@ -389,6 +449,7 @@ ICON 2
     margin-bottom: 15px;
     text-align: center;
     height: 100%;
+
     .icon {
         background-color: $color-primary;
         color: $white;
@@ -401,7 +462,9 @@ ICON 2
         @include border-radius(50%);
         margin-bottom: 20px;
     }
+
     .body-content {
+
         h1,
         h2,
         h3,
@@ -411,12 +474,14 @@ ICON 2
             color: $black;
         }
     }
+
     &:hover {
         .icon {
             /*color: $white;*/
             background-color: $color-secondary;
         }
     }
+
     &.style-2 {
         .icon {
             background-color: $white;
@@ -436,6 +501,7 @@ ICON 2
 .box-icon-2 {
     margin-bottom: 5px;
     height: 100%;
+
     .icon {
         background-color: $white;
         color: $color-primary;
@@ -451,8 +517,10 @@ ICON 2
         float: left;
         text-align: center;
     }
+
     .body-content {
         margin-left: 105px;
+
         h1,
         h2,
         h3,
@@ -461,6 +529,7 @@ ICON 2
             color: $color-primary;
         }
     }
+
     &:hover {
         .icon {
             background-color: $color-primary;
@@ -473,6 +542,7 @@ ICON 2
     margin-bottom: 40px;
     text-align: center;
     position: relative;
+
     .num {
         font-size: 100px;
         color: #dedede;
@@ -481,11 +551,13 @@ ICON 2
         left: 0;
         line-height: 0.6;
     }
+
     .icon {
         font-size: 36px;
         line-height: 1;
         color: $color-primary;
     }
+
     .body-content {
         font-size: 14px;
 
@@ -495,6 +567,7 @@ ICON 2
             clear: none;
 
             text-transform: uppercase;
+
             &:after {
                 content: "";
                 height: 2px;
@@ -509,10 +582,12 @@ ICON 2
 
 .rs-icon-2 {
     margin-bottom: 15px;
+
     .info-icon {
         display: flex;
         align-items: center;
     }
+
     .fa {
         color: $color-primary;
         text-align: center;
@@ -528,6 +603,7 @@ ICON 2
         transition-property: transform;
         transition-timing-function: ease-out;
     }
+
     .body-content {
         position: relative;
         margin-top: 20px;
@@ -537,12 +613,14 @@ ICON 2
 
     &.text-center {
         text-align: center;
+
         .fa {
             width: 80px;
             height: 80px;
             padding-top: 22px;
             margin-bottom: 20px;
         }
+
         .info-icon {
             display: block;
         }
@@ -579,10 +657,12 @@ ICON 2
 
 .rs-icon-info {
     margin-bottom: 15px;
+
     .info-icon {
         display: table-cell;
         position: relative;
     }
+
     .fa {
         width: 60px;
         height: 60px;
@@ -593,22 +673,27 @@ ICON 2
         font-size: 22px;
         color: $white;
     }
+
     .info-text {
         display: table-cell;
         padding-left: 20px;
         position: relative;
         vertical-align: middle;
     }
+
     &.center {
         text-align: center;
         padding: 30px 0;
         @include border-radius(6px);
+
         .info-icon {
             display: block;
         }
+
         .fa {
             background-color: transparent;
             font-size: 40px;
+
             &.bl {
                 background-color: $color_primary;
                 color: $white;
@@ -616,19 +701,24 @@ ICON 2
                 height: 80px;
             }
         }
+
         .info-text {
             display: block;
         }
     }
+
     &.text-right {
         text-align: right;
+
         .info-icon {
             float: right;
+
             &:after {
                 right: -5px;
                 top: -5px;
             }
         }
+
         .info-text {
             padding-left: auto;
             padding-right: 20px;
@@ -641,11 +731,13 @@ ICON 2
 .rs-icon-info-2 {
     display: flex;
     align-items: flex-start;
+
     .info-icon {
         text-align: center;
         display: flex;
         align-items: center;
     }
+
     .fa {
         width: 50px;
         height: 50px;
@@ -660,9 +752,11 @@ ICON 2
         transition-property: transform;
         transition-timing-function: ease-out;
     }
+
     .body-text {
         position: relative;
     }
+
     h1,
     h2,
     h3,
@@ -673,13 +767,16 @@ ICON 2
         color: darken($color-body, 20%);
     }
 }
+
 .rs-icon-info-3 {
     margin-bottom: 15px;
+
     .info-icon {
         text-align: center;
         display: flex;
         align-items: center;
     }
+
     .fa {
         width: 60px;
         height: 60px;
@@ -694,6 +791,7 @@ ICON 2
         transition-property: transform;
         transition-timing-function: ease-out;
     }
+
     .info-text {
         position: relative;
         margin-top: 20px;
@@ -703,12 +801,14 @@ ICON 2
 
     &.text-center {
         text-align: center;
+
         .fa {
             width: 80px;
             height: 80px;
             padding-top: 22px;
             margin-bottom: 20px;
         }
+
         .info-icon {
             display: block;
         }
@@ -761,6 +861,7 @@ ICON 2
     .info-icon {
         padding-bottom: 10px;
     }
+
     .fa {
         /*width: 70px;
 	    height: 70px;
@@ -770,6 +871,7 @@ ICON 2
         color: $color-primary;
         font-size: 24px;
     }
+
     h1,
     h2,
     h3,
@@ -790,6 +892,7 @@ ICON 2
     @include clearfix();
     /*height: 100%;*/
     border: 1px solid rgba($color-body, 0.4);
+
     .meta-date {
         color: $white;
         background-color: $black;
@@ -799,15 +902,18 @@ ICON 2
         left: 0;
         z-index: 2;
     }
+
     .media {
         width: 45%;
         position: relative;
         z-index: 1;
         overflow: hidden;
         background-color: $color-primary;
+
         img {
             transition: 0.4s all linear;
         }
+
         a:before {
             content: "\f0c1";
             font-family: $font-icon;
@@ -825,6 +931,7 @@ ICON 2
             transition: all ease 0.25s;
         }
     }
+
     .body {
         width: 55%;
         padding: 20px 30px;
@@ -836,13 +943,16 @@ ICON 2
             margin-bottom: 0;
             padding-bottom: 10px;
             border-bottom: 1px solid rgba($white, 0.1);
+
             a {
                 font-size: 18px;
                 color: $color-primary;
+
                 &:hover {
                     color: $color-secondary;
                 }
             }
+
             &:after {
                 content: "";
                 display: block;
@@ -855,6 +965,7 @@ ICON 2
             }
         }
     }
+
     &:hover .body:before {
         @include transform-scale(1, 1);
     }
@@ -863,6 +974,7 @@ ICON 2
 @media (max-width: 767px) {
     .box-news-1 {
         display: block;
+
         .media,
         .body {
             width: 100%;
@@ -874,6 +986,7 @@ ICON 2
 FACT
 ============================= */
 .rs-icon-funfact {
+
     /*color: $white;*/
     .icon {
         display: block;
@@ -887,8 +1000,10 @@ FACT
         text-align: center;
         @include border-radius(50%);
     }
+
     .body-content {
         margin-left: 95px;
+
         h1,
         h2,
         h3,
@@ -900,6 +1015,7 @@ FACT
             margin-bottom: 0;
         }
     }
+
     &:hover {
         .icon {
             background-color: $color-primary;
@@ -910,6 +1026,7 @@ FACT
 
 .rs-icon-funfact-2 {
     text-align: center;
+
     .icon {
         display: block;
         font-size: 30px;
@@ -921,13 +1038,16 @@ FACT
         color: $white;
         text-align: center;
         @include border-radius(50%);
+
         &.bg {
             background-color: $color-primary;
             color: $white;
         }
     }
+
     .body-content {
         display: block;
+
         h1,
         h2,
         h3,
@@ -939,6 +1059,7 @@ FACT
             margin-bottom: 0;
             color: $white;
         }
+
         p {
             color: $color-primary;
         }
@@ -949,9 +1070,11 @@ FACT
     text-align: center;
     color: $white;
     background-color: transparent !important;
+
     .box-fun {
         position: relative;
         height: 130px;
+
         &:before {
             background-color: transparent;
             @include border-radius(5px);
@@ -962,6 +1085,7 @@ FACT
             display: block;
             transform: rotate(45deg);
         }
+
         h2 {
             position: absolute;
             top: 0;
@@ -969,6 +1093,7 @@ FACT
             text-align: center;
         }
     }
+
     &.bg-primary {
         .box-fun {
             &:before {
@@ -976,6 +1101,7 @@ FACT
             }
         }
     }
+
     &.bg-secondary {
         .box-fun {
             &:before {
@@ -983,6 +1109,7 @@ FACT
             }
         }
     }
+
     &.bg-tertiary {
         .box-fun {
             &:before {
@@ -990,6 +1117,7 @@ FACT
             }
         }
     }
+
     &.bg-quaternary {
         .box-fun {
             &:before {
@@ -997,6 +1125,7 @@ FACT
             }
         }
     }
+
     .title {
         font-weight: 700;
         font-size: 18px;
@@ -1020,11 +1149,13 @@ CLASSES
         background-color: $color-primary;
         padding: 15px 30px;
     }
+
     .price {
         font-size: 24px;
         color: $color-secondary;
         font-weight: 700;
     }
+
     .detail {
         display: flex;
         flex-wrap: wrap;
@@ -1041,11 +1172,13 @@ CLASSES
         margin-left: -15px;
         margin-right: -15px;
         padding: 10px 30px;
+
         .fa {
             color: $color-primary;
             margin-right: 7px;
         }
     }
+
     .sosmed-icon {
         a {
             font-size: 14px;
@@ -1067,6 +1200,7 @@ FACT
         font-weight: 700;
         font-size: 48px;
     }
+
     .counter-title {
         display: table-cell;
         vertical-align: middle;
@@ -1083,17 +1217,21 @@ CTA QUOTE
 .cta-quote {
     text-align: center;
     color: $white;
+
     .title {
         font-size: 72px;
     }
+
     footer {
         font-size: 24px;
+
         &:before,
         &:after {
             content: "\2014";
         }
     }
 }
+
 /* ==========================
 BOX IMAGE
 ============================= */
@@ -1108,6 +1246,7 @@ BOX IMAGE
         margin-bottom: 20px;
         width: 70px;
         margin-right: 15px;
+
         img {
             @include border-radius(50%);
             width: 70px;
@@ -1115,7 +1254,9 @@ BOX IMAGE
             border: 2px solid $color-primary;
         }
     }
+
     .body-content {
+
         h1,
         h2,
         h3,
@@ -1126,6 +1267,7 @@ BOX IMAGE
         }
     }
 }
+
 .box-image-2 {
     margin-bottom: 15px;
     height: 100%;
@@ -1137,6 +1279,7 @@ BOX IMAGE
         margin-bottom: 20px;
         width: 100px;
         margin-right: 15px;
+
         img {
             @include border-radius(50%);
             width: 100px;
@@ -1144,7 +1287,9 @@ BOX IMAGE
             border: 2px solid $color-primary;
         }
     }
+
     .body-content {
+
         h1,
         h2,
         h3,
@@ -1155,6 +1300,7 @@ BOX IMAGE
         }
     }
 }
+
 .box-image-3 {
     margin-bottom: 15px;
     text-align: center;
@@ -1164,7 +1310,9 @@ BOX IMAGE
     .media-box {
         margin-bottom: 20px;
     }
+
     .body-content {
+
         h1,
         h2,
         h3,
@@ -1172,6 +1320,7 @@ BOX IMAGE
         h5 {
             font-weight: 400;
             color: $black;
+
             &:after {
                 margin-left: auto;
                 margin-right: auto;
@@ -1193,8 +1342,10 @@ BOX IMAGE
     position: relative;
     text-align: center;
     color: $white;
+
     .media {
         position: relative;
+
         .no {
             width: 40px;
             height: 40px;
@@ -1206,6 +1357,7 @@ BOX IMAGE
             font-family: $font-secondary;
         }
     }
+
     img {
         width: 80%;
         height: 80%;
@@ -1241,6 +1393,7 @@ PRICING TABLE
         padding: 20px 0;
         margin-bottom: 0;
     }
+
     .price {
         color: $white;
         font-size: 60px;
@@ -1255,6 +1408,7 @@ PRICING TABLE
             font-size: 28px;
             margin: 7px 3px 0 0;
             vertical-align: top;
+
             &.mon {
                 color: #999;
                 font-size: 16px;
@@ -1264,17 +1418,20 @@ PRICING TABLE
                 letter-spacing: 0;
             }
         }
+
         p {
             font-style: italic;
             font-size: 14px;
             font-weight: normal;
         }
     }
+
     .features {
         ul {
             list-style: outside none none;
             margin: 0;
             padding: 35px 0;
+
             li {
                 padding: 8px 0;
             }
@@ -1285,14 +1442,17 @@ PRICING TABLE
         background-color: $color-primary;
         color: $white;
         border-color: lighten($color-primary, 20%);
+
         .title {
             color: $white;
         }
+
         .price {
             color: $white;
             background-color: $color-secondary;
         }
     }
+
     &:hover {
         transform: translateY(-30px);
         box-shadow: 0px 5px 30px rgba(black, 0.2);
@@ -1316,11 +1476,13 @@ TESTIMONIALS
         width: 120px;
         height: 120px;
         @include border-radius(50%);
+
         img {
             @include border-radius(50%);
             transform: scale(1, 1);
             transition: 0.4s all linear;
         }
+
         &:hover {
             img {
                 @include opacity(0.3);
@@ -1330,6 +1492,7 @@ TESTIMONIALS
             }
         }
     }
+
     &:hover {
         .media img {
             @include opacity(0.3);
@@ -1338,23 +1501,28 @@ TESTIMONIALS
             transition-duration: 250ms;
         }
     }
+
     .body {
         overflow: hidden;
         color: $color-body;
     }
+
     .title {
         color: $color-primary;
         font-weight: 600;
         font-size: 16px;
     }
+
     .position {
         color: lighten($color-body, 50%);
     }
+
     .company {
         color: lighten($color-body, 50%);
         margin-bottom: 20px;
         font-size: 12px;
     }
+
     @media (max-width: 768px) {
         .media {
             float: none;
@@ -1363,6 +1531,7 @@ TESTIMONIALS
             clear: both;
             text-align: center;
         }
+
         .body {
             text-align: center;
         }
@@ -1376,12 +1545,15 @@ TESTIMONIALS
     background-position: center;
     height: 100%;
     color: $white;
+
     .title {
         @extend .section-heading;
     }
+
     .body {
         position: relative;
     }
+
     a {
         float: right;
     }
@@ -1389,10 +1561,12 @@ TESTIMONIALS
     &.bg-primary {
         background-color: $color-primary;
         color: $black;
+
         .title {
             color: $black;
         }
     }
+
     &.bg-secondary {
         background-color: $color-secondary;
     }
@@ -1416,6 +1590,7 @@ TESTIMONIALS
     padding: 40px 30px;
     height: 100%;
     overflow: hidden;
+
     &:before {
         content: "";
         position: absolute;
@@ -1426,6 +1601,7 @@ TESTIMONIALS
         bottom: 0;
         background-color: rgba(#000, 0.9);
     }
+
     &.active {
         &:before {
             background-color: rgba($color-primary, 0.9);
@@ -1436,10 +1612,12 @@ TESTIMONIALS
         width: 100%;
         margin-bottom: 30px;
         @include border-radius(20px);
+
         img {
             @include border-radius(20px);
         }
     }
+
     .body {
         position: relative;
         padding-right: 50px;
@@ -1464,29 +1642,36 @@ TESTIMONIALS
         .title {
             color: $white;
         }
+
         .body-content {
             color: $white;
         }
+
         .icon {
             right: 20px;
         }
+
         .more {
             background-color: $color-secondary;
             color: $color-primary;
             border-color: $color-secondary;
         }
     }
+
     p {
         margin-bottom: 0;
     }
+
     .title {
         margin-bottom: 15px;
+
         a {
             font-weight: 600;
             font-size: 18px;
             color: $color-primary;
         }
     }
+
     &.active {
         .title {
             a {
@@ -1510,14 +1695,17 @@ TESTIMONIALS
 
     &:hover {
         transform: translateY(-6px);
+
         &:before {
             background-color: rgba(#000, 0.8);
         }
+
         .title {
             a {
                 color: $white;
             }
         }
+
         .more {
             background-color: $color-primary;
             color: $white;
@@ -1528,6 +1716,7 @@ TESTIMONIALS
 
 #testimonial {
     position: relative;
+
     &:before {
         font-family: $font-icon;
         content: "\f10d";
@@ -1537,6 +1726,7 @@ TESTIMONIALS
         top: 0;
         color: $color-primary;
     }
+
     &:after {
         font-family: $font-icon;
         content: "\f10e";
@@ -1546,7 +1736,9 @@ TESTIMONIALS
         top: 30px;
         color: $color-primary;
     }
+
     @media (max-width: 767px) {
+
         &:before,
         &:after {
             display: none;
@@ -1561,11 +1753,13 @@ TESTIMONIALS
 
     .media-box {
         margin-right: 20px;
+
         img {
             width: 130px;
             height: 130px;
         }
     }
+
     .quote-box {
         align-items: center;
     }
@@ -1574,20 +1768,24 @@ TESTIMONIALS
         color: $white;
         font-size: 18px;
     }
+
     .quote-name {
         color: $color-primary;
         font-size: 24px;
         font-family: $font-secondary;
+
         span {
             font-size: 13px;
             font-style: italic;
             display: block;
             color: $white;
+
             &:before {
                 content: "\2014 \00A0";
             }
         }
     }
+
     @media (max-width: 575px) {
         display: block;
     }
@@ -1595,6 +1793,7 @@ TESTIMONIALS
 
 .rs-experience {
     position: relative;
+
     .fa {
         position: absolute;
         top: 10px;
@@ -1602,9 +1801,11 @@ TESTIMONIALS
         font-size: 45px;
         color: lighten($color-body, 30%);
     }
+
     .position {
         font-family: $font-secondary;
     }
+
     .title {
         color: $color-primary;
         margin-top: 5px;
@@ -1622,6 +1823,7 @@ BLOG
     background-color: $color-secondary;
     text-align: center;
     color: lighten($color-body, 30%);
+
     .media {
         width: 100%;
         margin-bottom: 20px;
@@ -1629,9 +1831,11 @@ BLOG
         z-index: 1;
         overflow: hidden;
         background-color: $color-primary;
+
         img {
             transition: 0.4s all linear;
         }
+
         &:before {
             content: "\f0c1";
             font-family: $font-icon;
@@ -1649,39 +1853,48 @@ BLOG
             transition: all ease 0.25s;
         }
     }
+
     .body {
         position: relative;
         padding: 10px 20px;
+
         .title {
             a {
                 font-size: 18px;
                 font-weight: 700;
                 color: $white;
+
                 &:hover {
                     color: $color-primary;
                 }
             }
         }
+
         .title {
             margin-bottom: 10px;
         }
+
         .meta-date {
             /*color: $color-primary;*/
             /*font-style: italic;*/
             font-size: 13px;
             font-family: $font-heading;
             margin-bottom: 20px;
+
             &:before {
                 content: "- ";
             }
         }
     }
+
     &:hover .body:before {
         @include transform-scale(1, 1);
     }
+
     &:hover {
         box-shadow: 4px 5px 30px rgba(black, 0.2);
         border-bottom-color: $color-secondary;
+
         .media {
             img {
                 @include opacity(0.4);
@@ -1689,6 +1902,7 @@ BLOG
                 transition-timing-function: ease-out;
                 transition-duration: 250ms;
             }
+
             &:before {
                 top: 50%;
                 @include opacity(1);
@@ -1704,6 +1918,7 @@ BOX TEAM
     position: relative;
     margin-bottom: 0;
     text-align: center;
+
     .desc {
         position: absolute;
         top: 0;
@@ -1714,6 +1929,7 @@ BOX TEAM
         @include opacity(0);
         @include transisi(0.3s);
     }
+
     .media {
         display: block;
         position: relative;
@@ -1722,11 +1938,13 @@ BOX TEAM
         margin-bottom: 20px;
         position: relative;
     }
+
     &:hover {
         .desc {
             @include opacity(1);
             transform: translateY(40px);
         }
+
         .media {
             img {
                 @include opacity(0.2);
@@ -1736,23 +1954,28 @@ BOX TEAM
             }
         }
     }
+
     .body {
         overflow: hidden;
         color: $color-body;
     }
+
     .title {
         @extend h4;
         margin-bottom: 5px;
         color: $black;
     }
+
     .position {
         font-size: 14px;
         color: $color-primary;
+
         &:before,
         &:after {
             content: " - ";
         }
     }
+
     .sosmed-icon {
         display: flex;
         justify-content: center;
@@ -1761,8 +1984,10 @@ BOX TEAM
         padding-left: 0;
         font-size: 18px;
         margin-top: 10px;
+
         li {
             list-style: none;
+
             /*padding: 0 10px;*/
             a {
                 background-color: $color-primary;
@@ -1770,12 +1995,14 @@ BOX TEAM
                 @include border-radius(50%);
                 margin-left: 2px;
                 margin-right: 2px;
+
                 &:hover {
                     background-color: $color-secondary;
                 }
             }
         }
     }
+
     &.hiring {
         .desc {
             position: absolute;
@@ -1788,6 +2015,7 @@ BOX TEAM
             transform: translateY(40px);
             color: $white;
         }
+
         &:hover {
             .media {
                 img {
@@ -1809,6 +2037,7 @@ BOX TEAM
     .body {
         color: $color-body;
     }
+
     .title {
         @extend h4;
         margin-top: 0;
@@ -1816,23 +2045,28 @@ BOX TEAM
         background-color: $color-primary;
         padding-top: 10px;
         padding-bottom: 10px;
+
         a {
             color: $white;
         }
     }
+
     .position {
         color: $color-primary;
         margin-bottom: 20px;
         font-family: $font-secondary;
         font-style: italic;
+
         &:before,
         &:after {
             content: " - ";
         }
     }
+
     .media-box {
         background-color: transparent;
     }
+
     .sosmed-icon {
         a {
             background-color: $white;
@@ -1840,33 +2074,39 @@ BOX TEAM
             @include border-radius(50%);
             margin-left: 2px;
             margin-right: 2px;
+
             &:hover {
                 color: $white;
                 background-color: $color-primary;
             }
         }
     }
-    &:hover {
-    }
+
+    &:hover {}
 }
 
 .rs-team-single {
     @extend .anim-media;
+
     .media-box {
         position: relative;
     }
+
     .body {
         overflow: hidden;
         color: $color-body;
     }
+
     .title {
         @extend h4;
         margin-bottom: 5px;
         color: $color-secondary;
+
         a {
             color: $color-secondary;
         }
     }
+
     .position {
         font-size: 14px;
         color: $color-primary;
@@ -1874,6 +2114,7 @@ BOX TEAM
         font-family: $font-secondary;
         font-style: italic;
     }
+
     .overlap-btn {
         text-align: center;
         position: relative;
@@ -1895,16 +2136,19 @@ BOX ICON
         background: #f8f8f8;
         @include border-radius(100px);
         text-align: center;
+
         &.no-bg {
             background-color: transparent;
         }
     }
+
     .body-content {
         display: table-cell;
         padding-left: 10px;
         vertical-align: middle;
         font-weight: 400;
         color: lighten($color-secondary, 40%);
+
         .heading {
             font-weight: 700;
             color: $color-secondary;
@@ -1926,9 +2170,11 @@ FORM CONTACT
         box-shadow: none;
         @include opacity(0.9);
     }
+
     textarea.form-control {
         height: auto;
     }
+
     .btn.disabled,
     .btn[disabled],
     fieldset[disabled] .btn {
@@ -1945,25 +2191,35 @@ FORM CONTACT
         box-shadow: none;
         @include opacity(0.9);
         color: $white;
+
         &::-webkit-input-placeholder {
             color: $white;
-            opacity: 1; /* Firefox */
+            opacity: 1;
+            /* Firefox */
         }
+
         &::-moz-placeholder {
             color: $white;
-            opacity: 1; /* Firefox */
+            opacity: 1;
+            /* Firefox */
         }
+
         &:-ms-input-placeholder {
             color: $white;
-            opacity: 1; /* Firefox */
+            opacity: 1;
+            /* Firefox */
         }
+
         &::-ms-input-placeholder {
             color: $white;
-            opacity: 1; /* Firefox */
+            opacity: 1;
+            /* Firefox */
         }
+
         &::placeholder {
             color: $white;
-            opacity: 1; /* Firefox */
+            opacity: 1;
+            /* Firefox */
         }
 
         &:-ms-input-placeholder {
@@ -1976,9 +2232,11 @@ FORM CONTACT
             color: $white;
         }
     }
+
     textarea.form-control {
         height: auto;
     }
+
     .btn.disabled,
     .btn[disabled],
     fieldset[disabled] .btn {
@@ -1994,6 +2252,7 @@ FORM CONTACT
         padding-right: 20px;
         border-color: transparent;
     }
+
     .btn {
         min-height: 52px;
     }
@@ -2006,14 +2265,17 @@ ACCORDION
     .card {
         /*margin-top: 10px;*/
         border-color: transparent;
+
         .card-header {
             color: $color-body;
             padding: 0;
             border-color: transparent;
+
             &:first-child {
                 border-radius: 0;
             }
         }
+
         .btn {
             display: block;
             width: 100%;
@@ -2023,23 +2285,28 @@ ACCORDION
             color: $white;
             font-size: initial;
             font-weight: 700;
+
             &.collapsed {
                 color: $white;
                 background-color: $color-primary;
             }
+
             &:focus {
                 text-decoration: none;
             }
         }
+
         &:first-of-type {
             border-top-left-radius: 0;
             border-top-right-radius: 0;
         }
+
         &:last-of-type {
             border-bottom-right-radius: 0;
             border-bottom-left-radius: 0;
         }
     }
+
     .title {
         font-size: 16px;
         margin: 0;
@@ -2048,10 +2315,12 @@ ACCORDION
         .btn {
             padding: 10px 30px;
             position: relative;
+
             &:hover,
             &:active {
                 text-decoration: none;
             }
+
             &:before {
                 content: "\29BE";
                 font-family: Arial;
@@ -2062,6 +2331,7 @@ ACCORDION
                 right: 20px;
                 line-height: 1;
             }
+
             &.collapsed {
                 &:before {
                     content: "\29BF";
@@ -2077,6 +2347,7 @@ ACCORDION
     overflow: hidden;
     width: 100%;
     margin-bottom: 10px;
+
     a,
     a img {
         display: block;
@@ -2086,29 +2357,35 @@ ACCORDION
         transition-duration: 250ms;
         cursor: pointer;
         transition: 0.4s all linear;
+
         &:hover {
             img {
                 transform: scale(1.05, 1.07);
                 transition-timing-function: ease-out;
                 transition-duration: 250ms;
             }
+
             .project-info {
                 @include opacity(1);
             }
+
             .project-icon {
                 @include opacity(1);
                 top: 50%;
                 transform: translateY(-50%);
+
                 .fa:hover {
                     @include opacity(1);
                 }
             }
+
             .details {
                 @include opacity(1);
                 bottom: 0;
             }
         }
     }
+
     .project-info {
         position: absolute;
         left: 0px;
@@ -2118,16 +2395,18 @@ ACCORDION
         background: rgba(black, 0.5);
         /*padding-top: 50%;*/
         text-align: center;
-        @include opacity(0);
+        @include opacity(.8);
         transition: all ease 0.25s;
+
         .project-icon {
             position: relative;
             top: 0;
 
-            @include opacity(0);
+            @include opacity(.8);
             transition: all ease 0.25s;
             width: 100%;
             color: $white;
+
             .fa {
                 font-size: 50px;
                 @include opacity(0.9);
@@ -2141,6 +2420,7 @@ ACCORDION
     width: 100%;
     margin-bottom: 10px;
     text-align: center;
+
     a,
     a img {
         overflow: hidden;
@@ -2151,18 +2431,22 @@ ACCORDION
         transition-duration: 250ms;
         cursor: pointer;
         transition: 0.4s all linear;
+
         .project-icon {
             top: 50%;
         }
+
         &:hover {
             img {
                 transform: scale(1.05, 1.07);
                 transition-timing-function: ease-out;
                 transition-duration: 250ms;
             }
+
             .project-info {
                 @include opacity(1);
             }
+
             .project-icon {
                 @include opacity(1);
 
@@ -2171,12 +2455,14 @@ ACCORDION
                     @include opacity(1);
                 }
             }
+
             .details {
                 @include opacity(1);
                 bottom: 0;
             }
         }
     }
+
     .project-info {
         position: absolute;
         left: 0px;
@@ -2187,23 +2473,27 @@ ACCORDION
         text-align: center;
 
         transition: all ease 0.25s;
+
         .project-icon {
             position: relative;
 
             transition: all ease 0.25s;
             width: 100%;
             color: $white;
+
             .fa {
                 font-size: 50px;
                 @include opacity(0.9);
             }
         }
     }
+
     .title {
         @extend h4;
         margin-top: 20px;
         margin-bottom: 5px;
         color: $color-primary;
+
         a {
             color: $color-primary;
         }
@@ -2215,8 +2505,10 @@ ACCORDION
     margin-bottom: 30px;
     overflow: hidden;
     background-color: rgba($color-body, 0.1);
+
     .media-box {
         overflow: hidden;
+
         a,
         a img {
             display: block;
@@ -2226,29 +2518,35 @@ ACCORDION
             transition-duration: 250ms;
             cursor: pointer;
             transition: 0.4s all linear;
+
             &:hover {
                 img {
                     transform: scale(1.05, 1.07);
                     transition-timing-function: ease-out;
                     transition-duration: 250ms;
                 }
+
                 .project-info {
                     @include opacity(1);
                 }
+
                 .project-icon {
                     @include opacity(1);
                     top: 50%;
                     transform: translateY(-50%);
+
                     .fa:hover {
                         @include opacity(1);
                     }
                 }
+
                 .details {
                     @include opacity(1);
                     bottom: 0;
                 }
             }
         }
+
         .project-info {
             position: absolute;
             left: 0px;
@@ -2260,6 +2558,7 @@ ACCORDION
             text-align: center;
             @include opacity(0);
             transition: all ease 0.25s;
+
             .project-icon {
                 position: relative;
                 top: 0;
@@ -2268,6 +2567,7 @@ ACCORDION
                 transition: all ease 0.25s;
                 width: 100%;
                 color: $color-primary;
+
                 .fa {
                     font-size: 50px;
                     @include opacity(0.9);
@@ -2281,10 +2581,12 @@ ACCORDION
         color: $color-body;
         padding: 20px 30px;
     }
+
     .title {
         @extend h4;
         margin-bottom: 5px;
         color: $black;
+
         a {
             color: $black;
         }
@@ -2298,6 +2600,7 @@ TABS
     ul.nav {
         margin-left: 0;
     }
+
     .nav-tabs {
         .nav-link {
             border: 1px solid lighten($color-body, 30%);
@@ -2307,6 +2610,7 @@ TABS
             font-size: 18px;
             font-weight: 700;
             padding: 0.5rem 3rem;
+
             &.active {
                 background-color: $color-primary;
                 color: $white;
@@ -2314,6 +2618,7 @@ TABS
             }
         }
     }
+
     .tab-content {
         padding: 30px;
         background-color: #fafafa;
@@ -2325,10 +2630,12 @@ TABS
     display: flex;
     margin-bottom: 20px;
     align-items: center;
+
     .image {
         width: 90px;
         height: 90px;
         margin-right: 20px;
+
         img {
             border: 2px solid $color-primary;
             @include border-radius(50%);
@@ -2351,6 +2658,7 @@ TESTIMONIAL
 .rs-testimonial-1 {
     position: relative;
     margin-bottom: 30px;
+
     .media {
         float: left;
         margin: 0 30px 30px 0;
@@ -2361,12 +2669,14 @@ TESTIMONIAL
         background-color: $white;
         border: 5px solid #f8f8f8;
         @include border-radius(50%);
+
         img {
             @include border-radius(50%);
             transform: scale(1, 1);
             transition: 0.4s all linear;
         }
     }
+
     &:after {
         content: "\f10d";
         font-family: $font-icon;
@@ -2377,9 +2687,11 @@ TESTIMONIAL
         color: $color-primary;
         font-size: 18px;
     }
+
     &:hover {
         .media {
             background-color: rgba($color-primary, 0.3);
+
             img {
                 @include opacity(0.3);
                 transform: scale(1.05, 1.05);
@@ -2388,28 +2700,35 @@ TESTIMONIAL
             }
         }
     }
+
     .body {
         overflow: hidden;
         color: $color-body;
     }
+
     .title {
         color: $black;
         font-family: $font-heading;
         font-weight: 700;
         font-size: 16px;
+
         &:before {
             content: "\2014 \00A0";
         }
     }
+
     .position {
         color: lighten($color-body, 50%);
     }
+
     .company {
         margin-bottom: 20px;
     }
 }
+
 .rs-testimonial-2 {
     position: relative;
+
     /*padding-left: 50px;*/
     .body {
         padding: 20px;
@@ -2418,6 +2737,7 @@ TESTIMONIAL
         @include border-radius(4px);
         position: relative;
         margin-bottom: 30px;
+
         &:after {
             content: "";
             display: block;
@@ -2431,16 +2751,19 @@ TESTIMONIAL
             transform: rotate(45deg);
         }
     }
+
     .media {
         width: 70px;
         height: 70px;
         float: left;
     }
+
     .rs-testimonial-footer {
         font-weight: 700;
         margin-left: 85px;
         color: $color-primary;
         padding-top: 5px;
+
         cite {
             display: block;
             font-weight: normal;
@@ -2448,11 +2771,13 @@ TESTIMONIAL
         }
     }
 }
+
 .rs-testimonial-3 {
     position: relative;
     box-sizing: border-box;
     text-align: center;
     color: $white;
+
     .quote-box {
         blockquote {
             font-size: 24px;
@@ -2461,6 +2786,7 @@ TESTIMONIAL
             margin: 0;
             border-left: 0;
         }
+
         .quote-name {
             margin-top: 30px;
             font-size: 18px;
@@ -2472,15 +2798,18 @@ TESTIMONIAL
                 font-style: italic;
                 font-weight: normal;
                 display: block;
+
                 &:before,
                 &:after {
                     content: " \2014 \00A0 ";
                 }
             }
         }
+
         .media {
             margin: 40px 0 20px 0;
             text-align: center;
+
             img {
                 /*border: 3px solid $color-primary;*/
                 margin: 0 auto;
@@ -2490,14 +2819,17 @@ TESTIMONIAL
         }
     }
 }
+
 .rs-testimonial-4 {
     position: relative;
     box-sizing: border-box;
     display: flex;
     align-items: flex-start;
+
     .media {
         margin: 0 20px 20px 0;
         text-align: center;
+
         img {
             border: 3px solid $white;
             margin: 0 auto;
@@ -2505,6 +2837,7 @@ TESTIMONIAL
             height: 150px;
         }
     }
+
     .quote-box {
         blockquote {
             font-size: 24px;
@@ -2513,14 +2846,17 @@ TESTIMONIAL
             margin: 0;
             border-left: 0;
         }
+
         .quote-name {
             margin-top: 30px;
             font-size: 18px;
             line-height: 34px;
             color: $white;
+
             &:before {
                 content: "\2014 \00A0";
             }
+
             span {
                 font-size: 14px;
                 font-style: italic;
@@ -2541,18 +2877,22 @@ TESTIMONIAL
     background-color: #f8f8f8;
     padding: 30px;
     display: block;
+
     .icon {
         position: absolute;
         bottom: 20px;
         right: 20px;
+
         .fa {
             font-size: 50px;
             color: rgba($color-body, 0.3);
         }
     }
+
     .body {
         position: relative;
     }
+
     h1,
     h2,
     h3,
@@ -2563,9 +2903,11 @@ TESTIMONIAL
         margin-top: 0;
         margin-bottom: 0;
     }
+
     &.bg-primary {
         display: block;
     }
+
     &.bg-secondary {
         background-color: $color-secondary;
         color: $white;
@@ -2587,20 +2929,22 @@ Back To Top Section
     overflow: hidden;
     text-indent: 100%;
     white-space: nowrap;
-    background: rgba($color_primary, 1) url("../images/cd-top-arrow.svg")
-        no-repeat center 50%;
+    background: rgba($color_primary, 1) url("../images/cd-top-arrow.svg") no-repeat center 50%;
     visibility: hidden;
     @include opacity(0);
     transition: opacity 0.3s 0s, visibility 0s 0.3s;
     @include border-radius(20px);
+
     &:hover {
         @include opacity(1);
         transition: opacity 0.3s 0s, visibility 0s 0s;
     }
+
     &.cd-is-visible {
         visibility: visible;
         @include opacity(1);
     }
+
     &.cd-fade-out {
         @include opacity(0.5);
     }
@@ -2618,30 +2962,36 @@ Back To Top Section
         color: $black;
         font-size: 18px;
         display: inline-block;
+
         span {
             font-size: 16px;
             color: $color-secondary;
         }
     }
+
     .persen {
         float: right;
         padding-top: 14px;
         font-weight: 700;
         color: $color-primary;
     }
+
     .progress {
         clear: both;
         background-color: lighten($color-body, 20%);
         @include border-radius(0);
         height: 5px;
     }
+
     &.progress-right {
         .progress {
             flex-direction: row-reverse;
         }
+
         .name {
             float: right;
         }
+
         .persen {
             float: left;
         }
@@ -2655,19 +3005,23 @@ Back To Top Section
 .navfilter {
     text-align: center;
 }
+
 .portfolio_filter {
     margin: 0;
     padding: 0;
+
     li {
         display: inline-block;
         list-style: none;
         padding: 0 2px;
         text-decoration: none;
+
         a {
             padding: 14px 25px;
             background-color: rgba($color-body, 0.2);
             color: $color-body;
             text-transform: none;
+
             &.active {
                 color: $white;
                 background-color: $color-primary;
@@ -2679,13 +3033,16 @@ Back To Top Section
 .item-menu {
     display: flex;
     justify-content: space-between;
+
     .body-text {
         width: 80%;
     }
+
     .title {
         margin-top: 0;
         margin-bottom: 15px;
         color: $color-primary;
+
         &:after {
             content: "";
             border-bottom: 2px dotted $color-body;
@@ -2698,6 +3055,7 @@ Back To Top Section
             margin-top: 10px;
         }
     }
+
     .price {
         color: $black;
         font-size: 28px;
@@ -2707,6 +3065,7 @@ Back To Top Section
 .rating {
     unicode-bidi: bidi-override;
     direction: rtl;
+
     span {
         &:before {
             color: #f7931e;
@@ -2729,6 +3088,7 @@ Back To Top Section
         color: $white;
         font-family: $font-heading;
         background-color: lighten($color-secondary, 30%);
+
         &.active {
             background-color: $color-primary;
             color: $white;
@@ -2742,6 +3102,7 @@ Back To Top Section
     color: $white;
     display: flex;
     align-items: center;
+
     .meta-date {
         background-color: $color-primary;
         text-align: center;
@@ -2749,10 +3110,12 @@ Back To Top Section
         color: $white;
         padding: 30px 20px;
         width: 135px;
+
         .month {
             text-transform: uppercase;
             display: block;
         }
+
         .date {
             font-size: 48px;
             line-height: 0.8;
@@ -2763,44 +3126,56 @@ Back To Top Section
             font-family: $font-heading;
         }
     }
+
     .body-content {
         width: 100%;
         display: flex;
         justify-content: space-between;
         margin-left: 20px;
         margin-right: 20px;
+
         h4 {
             margin-bottom: 10px;
         }
+
         i {
             color: $color-primary;
             margin-right: 3px;
         }
+
         .location {
             margin-right: 30px;
         }
+
         a {
             color: $white;
+
             &:hover {
                 color: color-primary;
             }
         }
     }
+
     @media (max-width: 767px) {
         align-items: normal;
+
         .meta-date {
             margin-right: 0;
             padding: 30px 5px;
             width: 100px;
+
             .date {
                 font-size: 30px;
             }
         }
+
         .body-content {
             display: block;
+
             span {
                 display: block;
             }
+
             .detail-event {
                 margin-top: 20px;
             }
@@ -2810,9 +3185,11 @@ Back To Top Section
 
 .list-events {
     .box-event {
+
         /*background-color: lighten($color-secondary, 20%);*/
         &:nth-child(2n) {
             background-color: lighten($color-secondary, 20%);
+
             .meta-date {
                 background-color: lighten($color-secondary, 5%);
             }
