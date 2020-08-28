@@ -108,10 +108,11 @@ $(document).ready(function () {
         b = slides.find(".item");
     b.each(function () {
         var e = $(this),
-            ocImg = e.find("img").attr("src");
-        e.css({
-            "background-image": "url(" + ocImg + ")"
-        });
+            ocImg = e.find("img").prop("currentSrc");
+        ocImg =
+            e.css({
+                "background-image": "url(" + ocImg + ")"
+            });
     });
 
     slides.owlCarousel({
