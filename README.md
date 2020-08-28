@@ -1,4 +1,4 @@
-## My music portfolio website
+## Music Portfolio
 
 ###### Built from the Kube template by Rometheme.
 
@@ -6,4 +6,12 @@ My first project in a few years that I haven't used a backend for. I wanted to s
 
 #### Email Form
 
-Email form functionality will be implemented through the use of the API already built on my web development portfolio. Axios will be used to make a POST request to that API and send the email from the contact form.
+Email form functionality will be implemented through the use of the API already built on my web development portfolio. I'm making a fetch request to the endpoint on the API and it handles where to send the email based on which form it is submitted from.
+
+Form validation was already handled for the most part and I just had to make a few tweaks on the template.
+
+#### Mobile Considerations
+
+In order to tell if a user was on a mobile device I used javascript to detect whether a user was using a touch screen and the width of the html element was under normal desktop widths.
+
+This allowed me to display overlays on image by default for mobile as opposed to on hover for the desktop version and handle some weirdness with the jQuery magnific popup that was causing my YouTube playlist to not open for mobile devices.
