@@ -107,15 +107,32 @@ $(document).ready(function () {
 
     /* =================================
 	BANNER ROTATOR IMAGE 
-	=================================== */
+    =================================== */
+    let extension;
+    if (Modernizr.webp) {
+        extension = undefined
+    } else {
+        extension = undefined
+    }
+
     var slides = $(".full-screen"),
         b = slides.find(".item");
     b.each(function () {
         var e = $(this),
             ocImg = e.find("img").prop("currentSrc");
+        let filenameArrFile = ocImg.split('/')
+        let filenameFull = filenameArrFile[filenameArrFile.length - 1]
+        let filenameArr = filenameFull.split('.')
+        let filename;
+        if (extension) {
+
+            filename = "images/" + filenameArr[0] + "." + extension
+        } else {
+            filename = "images/" + filenameArr[0] + "." + filenameArr[1]
+        }
         ocImg =
             e.css({
-                "background-image": "url(" + ocImg + ")"
+                "background-image": "url(" + filename + ")"
             });
     });
 
