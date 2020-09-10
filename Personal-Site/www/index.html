@@ -38,7 +38,7 @@
 		document.documentElement.classList.remove("no-js");
 	</script>
 	<script src="js/vendor/modernizr.min.js"></script>
-
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body data-spy="scroll" data-target="#navbar-main">
@@ -482,7 +482,7 @@
 							CONTACT
 						</h2>
 						<p class="subheading text-white">for booking or just to chat!</p>
-
+						<div id="success"></div>
 						<form action="#" class="form-contact" id="contactForm">
 							<div class="form-group">
 								<input type="text" class="form-control" id="p_name" placeholder="Enter Name"
@@ -504,9 +504,12 @@
 									placeholder="Enter Your Message"></textarea>
 								<div class="help-block with-errors"></div>
 							</div>
+							<div class="g-recaptcha" data-sitekey="6LdWwQ8TAAAAAGNWniRmvnwIywhxC8_z2Vk8C2a6">
+								<!--data-size="compact"-->
+							</div>
 							<div class="form-group">
 								<div class="text-left">
-									<div id="success"></div>
+
 									<button type="submit" id="btnEmail" class="btn btn-primary">SEND MESSAGE</button>
 								</div>
 							</div>

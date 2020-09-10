@@ -33,7 +33,13 @@ async function submitForm() {
     args.forEach((arg) => {
         data[arg] = document.getElementById(arg).value;
     });
-
+    let reCaptcha = grecaptcha.getResponse();
+    if (reCaptcha.length > 0) {
+        data['g-recaptcha-response'] = reCaptcha;
+    } else {
+        formError();
+        submitMSG(false, "Please validate the reCAPTCHA");
+    }
     const response = await fetch(
         `https://www.dillonestrada.com/contact?music=True`, {
             method: "POST",
