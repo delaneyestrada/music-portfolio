@@ -3750,6 +3750,18 @@ ACCORDION
   color: #eee;
 }
 
+.img-logo {
+  width: 100%;
+  max-width: 360px !important;
+}
+
+@media (max-width: 575px) {
+  .box-gallery img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .box-gallery {
   position: relative;
   overflow: hidden;
@@ -6447,10 +6459,6 @@ Back To Top Section
 
 #contact-sidebar-content {
   position: relative;
-}
-
-.mfp-img {
-  max-width: 600px !important;
 }
 
 #contact {

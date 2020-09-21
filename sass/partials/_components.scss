@@ -2342,6 +2342,18 @@ ACCORDION
     }
 }
 
+.img-logo {
+    width: 100%;
+    max-width: 360px !important;
+}
+
+@media (max-width: 575px) {
+    .box-gallery img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 .box-gallery {
     position: relative;
     overflow: hidden;
@@ -2406,6 +2418,7 @@ ACCORDION
             transition: all ease 0.25s;
             width: 100%;
             color: $white;
+
 
             .fa {
                 font-size: 50px;

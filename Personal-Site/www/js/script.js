@@ -115,44 +115,50 @@ $(document).ready(function () {
         extension = undefined
     }
 
-    var slides = $(".full-screen"),
-        b = slides.find(".item");
-    b.each(function () {
-        var e = $(this),
-            ocImg = e.find("img").prop("currentSrc");
-        let filenameArrFile = ocImg.split('/')
-        let filenameFull = filenameArrFile[filenameArrFile.length - 1]
-        let filenameArr = filenameFull.split('.')
-        let filename;
-        if (extension) {
+    window.addEventListener('load', (event) => {
+        console.log("LOADED")
+        var slides = $(".full-screen"),
+            b = slides.find(".item");
+        b.each(function () {
+            var e = $(this),
+                ocImg = e.find("img").prop("currentSrc");
+            let filenameArrFile = ocImg.split('/')
+            let filenameFull = filenameArrFile[filenameArrFile.length - 1]
+            let filenameArr = filenameFull.split('.')
+            let filename;
+            if (extension) {
 
-            filename = "images/" + filenameArr[0] + "." + extension
-        } else {
-            filename = "images/" + filenameArr[0] + "." + filenameArr[1]
-        }
-        ocImg =
-            e.css({
-                "background-image": "url(" + filename + ")"
-            });
-    });
+                filename = "images/" + filenameArr[0] + "." + extension
+            } else {
+                filename = "images/" + filenameArr[0] + "." + filenameArr[1]
+            }
+            ocImg =
+                e.css({
+                    "background-image": "url(" + filename + ")"
+                });
+        });
 
-    slides.owlCarousel({
-        // stagePadding: 50,
-        loop: true,
-        // margin: 10,
-        autoplay: true,
-        autoplayTimeout: 7000,
-        nav: true,
-        dots: false,
-        animateIn: "fadeIn",
-        animateOut: "fadeOut",
-        navText: [
-            '<i class="fa fa-angle-left" aria-hidden="true"></i>',
-            '<i class="fa fa-angle-right" aria-hidden="true"></i>',
-        ],
-        navContainer: ".banner .custom-nav",
-        items: 1,
-    });
+        slides.owlCarousel({
+            // stagePadding: 50,
+            loop: true,
+            // margin: 10,
+            autoplay: true,
+            autoplayTimeout: 7000,
+            nav: true,
+            dots: false,
+            animateIn: "fadeIn",
+            animateOut: "fadeOut",
+            navText: [
+                '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+                '<i class="fa fa-angle-right" aria-hidden="true"></i>',
+            ],
+            navContainer: ".banner .custom-nav",
+            items: 1,
+        });
+    })
+
+
+
 
     /* =================================
 	BACK TO TOP 
