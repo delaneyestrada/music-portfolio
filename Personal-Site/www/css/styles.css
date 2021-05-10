@@ -6479,6 +6479,10 @@ Back To Top Section
   white-space: initial !important;
 }
 
-.rs-icon-info-2 > .body-text :hover {
-  color: #da8b0e;
+a.info-link {
+  color: #fff;
+}
+
+a.info-link:hover {
+  color: #da8b0e !important;
 }

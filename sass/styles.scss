@@ -31,8 +31,9 @@
     white-space: initial !important;
 }
 
-.rs-icon-info-2 > .body-text {
-    :hover {
-        color: $color-primary;
+a.info-link {
+    color: #fff;
+    &:hover {
+        color: $color-primary !important;
     }
 }
