@@ -1,5 +1,7 @@
 $(document).ready(function () {
     "use strict";
+
+
     // Touch screen functionality
     function isMobile() {
         try {

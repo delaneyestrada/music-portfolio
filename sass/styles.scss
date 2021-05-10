@@ -8,7 +8,8 @@
 @import "partials/footer";
 @import "partials/responsive";
 
-@mixin bg-gradient($color1, $color2) {}
+@mixin bg-gradient($color1, $color2) {
+}
 
 // .mfp-img {
 //     max-width: 600px !important;
@@ -16,13 +17,22 @@
 
 #contact {
     background: linear-gradient(to bottom, #000000, #2f2f2f);
-
 }
 
 #quote {
-    background: linear-gradient(to top, #000000, #1a1a1a)
+    background: linear-gradient(to top, #000000, #1a1a1a);
 }
 
 .g-recaptcha {
     margin-bottom: 1rem;
+}
+
+.badge {
+    white-space: initial !important;
+}
+
+.rs-icon-info-2 > .body-text {
+    :hover {
+        color: $color-primary;
+    }
 }
